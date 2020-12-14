@@ -106,19 +106,94 @@ html {
 */
 #form__section{
     width:99%;
-    min-height: 80%;
-   border: 1px solid red;
-    background-color: grey;
+    margin-top: 10px;
+    height:80vh;
+    /* border: 3px solid red; */
+    background-color: #f8f7f7;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* position: relative; */
 }
 #form__fill{
     width: 50%;
-    background-color: rgb(173, 166, 173);
+    height: 70%;
+    margin-top: 2em;
+    /* background-color:#f1efef; */
+    text-align: center;
+    /* position: absolute; */
 }
 #form__fill>form{
-    width: 80%;
+    
+    width: 60%;
+    height: 100%;
+    border-radius: 12px;
     margin: auto;
-    background-color: rgb(253, 253, 251);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 5vmin;
 }
-#form__fill>form input{
-    width: 100%;
+#form__fill>form *{
+    width: 90%;
+    flex-grow: 1;
+    border-radius: 10px;
+    border: 0.1px solid whitesmoke;
+}
+#form__fill>form *:focus{
+    border: 1px solid cyan;
+    outline: none;
+
+}
+#form__right{
+    width: 50%;
+    /* background-color: lightcoral; */
+    /* position: absolute; */
+    /* left:50%; */
+    padding: 5vmin;
+    height: 100%;
+}
+#form__right>h1{
+    font-size: 2em;
+    text-align: center;
+    text-shadow:1px 1px grey;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 5vmin;
+}
+
+.form__right__heading{
+    font-size: 1.3em;
+    /* font-weight: bold; */
+    text-shadow:1px 1px black;
+    color:cyan;
+}
+.form__right__content{
+    font-size: 1em;
+    text-shadow:2px 2px white;
+    color:black;
+}
+@media screen and (max-width: 600px){
+    
+    #form__section{
+        flex-direction: column;
+        height: fit-content;
+    }
+    #form__fill{
+        width:100%;
+    }
+    #form__fill>form{
+        padding: 0vmin;
+    }
+    #form__fill>form *{
+        width: 90%;
+        height: 3em;
+        align-content: stretch;
+       
+    }
+    #form__right{
+        width:100%;
+    }
+
 }
